@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    {% endblock %}
+{% block content %}
+  
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Hotels in South Africa</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="../static/images/g3.jpg" alt="">
+          </div>
+          <div class="text">
+            <a href="{{url_for('main.bookSouth')}}">South Beach Camps Bay Boutique Hotel</a>
+            <p> <span>$</span>150 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="../static/images/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <a href="{{url_for('main.bookLa')}}">La Fontaine</a>
+            <p> <span>$</span>170 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="../static/images/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <a href="{{url_for('main.bookMont')}}">Mont Rochelle</a>
+            <p> <span>$</span>200 <span>/per night</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hotels</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="../static/images/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../static/images/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About Luviana</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>
+          <li><i class="far fa-envelope"></i>demoexample@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-3"> </div>
+<div class="col-md-6" style="margin-top:10%; font-size:xx-large; color: brown;">
+
+    <form method="post">
+        {{form.hidden_tag()}}
+        
+        {{form.category.label(class ="form-label")}}
+        
+        {{form.category(class ="form-select")}}
+        
+        {{form.next(class ="btn btn-secondary")}}
+        
+        </form>
+
+</div>
+<div class="col-md-5"></div>
+</div>
+</div>
+
+{% endblock%}
