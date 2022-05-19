@@ -1,6 +1,6 @@
+{% extends 'bootstrap/base.html'%}
 
-
-
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +9,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel mania</title>
     <style>
-
         #map{
             width:100%;
             height:400px;
         }
+        #reviews{
+            display:flex;
+
+        }
     </style>
 </head>
 <body>
-    <section>
+<section>
     <h3>Reviews</h3>
+    <div class="container">
+        <div class="row" id="reviews">
+            <div class="col-md-3">
+                <h4>Kendrick Lamar</h4>  
+                <p>2022/07/16 7.30</p>
+                <p>The best hotel I<q></q>ve ever been privileged enough to stay at. Gorgeous building, and it only gets more breathtaking when you walk in. High quality rooms (there was even a tv by the shower), and high quality service. Also, they are one of few hotels that allow people under 21 to book a reservation.</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Odoi Ibrahim</h4>
+                <p>2022/07/16 12.30</p>
+                <p> They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait. So this was a big plus. The sevice was exceptional as well. Would definitely send a friend there</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Trio Mio</h4>
+                <p>2022/07/16 4.30</p>
+                <p> The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting Nairobi</p>
+            </div>
+        </div>
+
+    </div>
 </section>
+    
     <div id="map"></div>
     <script>
-
         function initMap(){
             var options = {
                 zoom:4,
@@ -39,3 +62,5 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiKG3O02TjYusIrutTiDD30TVA1driL4s&callback=initMap"></script>
 </body>
 </html>
+
+{% endblock %}
