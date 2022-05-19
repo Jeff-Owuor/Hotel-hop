@@ -28,3 +28,18 @@ class Login(FlaskForm):
     submit = SubmitField("Login")
     
     
+    #Profile Update Form
+class UpdateForm(FlaskForm):
+    
+    def validate_email(self, email):
+        if email.data != current_user.email:
+            user = User.query.filter_by(email=email.data).first()
+            if user:
+                raise ValidationError("That email is taken.Please choose a different one")
+    
+    name = StringField('Name',validators=[DataRequired()], render_kw={"placeholder":"Name"})
+    email = StringField('Email',validators=[DataRequired(), Email()], render_kw={"placeholder":"example@example.com"})
+    profile_pic = FileField('Update Profile Pic', validators=[FileAllowed(['jpg','png','jpeg']), DataRequired()])
+    bio = TextAreaField('Bio',validators=[DataRequired()], render_kw={"placeholder":"Tell us more about yourself"})
+    submit = SubmitField('Update')
+    
